@@ -113,7 +113,9 @@ const App:React.FC<BaseProps> = () => {
             } }   /> 
       </Box>
       </div>
-      <Box sx={{borderColor:'#E0607E'}}>
+      
+    <main>
+    <Box sx={{borderColor:'#E0607E'}}>
         <div className='flex-container1'>
     <header className="App-header">
       <div className='hero-image'>
@@ -134,7 +136,6 @@ const App:React.FC<BaseProps> = () => {
      
       </div>
       </Box>
-    <main>
   <div className='top-headlines-div-flex-container'>
     <div  className='top-headlines-content'>
     <HeroSlide  />

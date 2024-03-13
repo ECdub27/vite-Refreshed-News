@@ -1,5 +1,5 @@
 import { useGetTechnologyArticlesQuery } from "../../store/newsApiSlice";
-import './TechnologySection.css';
+import './technologySection.css';
 import LinearBuffer from "../../linearBuffer";
 import Container from '@mui/material/Container';
 import ImageList from '@mui/material/ImageList';
