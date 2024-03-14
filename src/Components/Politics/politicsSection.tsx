@@ -1,13 +1,12 @@
 
+import { ApiProps, AppProps } from "../../App";
 import LinearBuffer from "../../linearBuffer";
 import { useGetPoliticsArticlesQuery } from "../../store/newsApiSlice";
 import  Typography  from "@mui/material/Typography";
-
-import { ApiProps, ResultItems } from '../../App';
 import React, { Key } from 'react';
 
 
-const PoliticsSection:React.FC<ApiProps> = (): JSX.Element => {
+const PoliticsSection:React.FC<AppProps> = () => {
    const {data, isLoading, error} = useGetPoliticsArticlesQuery('');
  
 
@@ -27,7 +26,7 @@ return (
              ) : data ? (
               
                <>
-               {data.articles.map((article:ResultItems & ApiProps, index: ResultItems & Key) => (
+               {data.articles.map((article:ApiProps & AppProps, index:ApiProps & Key) => (
                  <div key={index}>
                   <Typography  sx={{alignContent: 'center'}}fontFamily="League Spartan"
            color='#E0607E'>

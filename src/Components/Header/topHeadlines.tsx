@@ -6,7 +6,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import  Typography  from '@mui/material/Typography';
-import { ApiProps, ResultItems } from '../../App';
+import { ApiProps, AppProps, BaseProps, ResultItems } from '../../App';
 import React, { Key } from 'react';
 
 const srcset = (image: string, size: number, rows = 1, cols = 1) => {
@@ -19,7 +19,7 @@ const srcset = (image: string, size: number, rows = 1, cols = 1) => {
 };
 
 
-const TopHeadlines: React.FC<ApiProps> = (): JSX.Element =>{
+const TopHeadlines: React.FC<AppProps | BaseProps> = (): JSX.Element =>{
 
     const {data, isLoading, error } = useGetAllArticlesQuery('');
  // use image list with subheader for links and to format the return data..
@@ -36,7 +36,7 @@ const TopHeadlines: React.FC<ApiProps> = (): JSX.Element =>{
        
         <>
         <ImageList sx={{width: 900, height: 800, padding:2}}>
-        {data.articles.map((article:ResultItems & ApiProps, index: ResultItems & Key) => (
+        {data.articles.map((article, index) => (
           <ImageListItem key={article.urlToImage}> 
           <Container> 
            <img {...srcset(article.urlToImage, 121, article.rows, article.cols)} className='All-news-img'src={article.urlToImage} alt={article.title}/>

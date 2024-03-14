@@ -28,9 +28,7 @@ useEffect(() =>{
 },[])
 // promise ismapped out; lets use no referrer might need Router
 
-if(getBusinessNewsStatus === 'loading'){
-    return <p>Hold Up I working on it! <LinearBuffer/></p>
- } 
+
 
 
 return (

@@ -2,11 +2,12 @@ import React, { Key } from 'react';
 import LinearBuffer from '../../linearBuffer';
 import { useGetBusinessArticlesQuery} from '../../store/newsApiSlice'
 import './newsArticle.css';
-import { ApiProps, ResultItems } from '../../App';
+import { ApiProps, AppProps } from '../../App';
 
 
 
-const NewsArticle: React.FC<ApiProps> = (): JSX.Element =>{ 
+
+const NewsArticle: React.FC<AppProps> = ()  =>{ 
   
 
    const {data, error, isLoading} = useGetBusinessArticlesQuery('')
@@ -24,15 +25,16 @@ return (
     <div className='business-section-div'>
        <main id="mainContent">
         
-         <h2 className='Business-h2'>Business Sources </h2>
+        
          {error ? (
         <>Oh no, there was an error</>
       ) : isLoading ? (
         <>Loading... <LinearBuffer /> </>
       ) : data ? (
-       
+        
         <div className='card'>
-        {data.sources.map((article:ResultItems & ApiProps, index: ResultItems & Key) => (
+          <h2 className='Business-h2'>Business Sources </h2>
+        {data.sources.map((article:ApiProps & AppProps, index:ApiProps & Key) => (
           
           <div className= 'data-div' key={index} >
            
