@@ -40,6 +40,3 @@ export default techArticleSlice.reducer;
 
 
 // selector vars
-export const selectTechArticles = (state) => state.technologyNews.techArticles
-export const getTechArticlesStatus = (state) =>  state.technologyNews.status;
-export const getTechArticlesError = (state) => state.technologyNews.error;

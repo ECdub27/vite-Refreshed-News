@@ -40,7 +40,3 @@ export const {startPoliticsArticles, getPoliticsArticles,failPoliticsArticles} =
 export default politicsArticleSlice.reducer;
 
 // selector variables
-export const selectPollyArticles = (state) => state.politicsNews.politicsArticles
-
-export const getPoliticsArticlesStatus = (state) => state.politicsNews.status;
-export const getPoliticsArticlesError = (state) => state.politicsNews.rejected;
