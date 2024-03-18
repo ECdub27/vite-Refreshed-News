@@ -29,12 +29,15 @@ export const apiSlice = createApi({
         }),
         getArticlesById: builder.query({
             query:() => 'https://newsapi.org/v2/everything?domains=google.com,nytimes.com&apiKey=78df58fec805459caf086c63cbe2b3a9'
+        }),
+        getTestCallArticles: builder.query({
+            query:() => 'gnews.io/api/v4/top-headlines?category=general&apikey=3962e1fc9b4bd04cb33c8325ef1ce616'
         })
         })
     })
 
 
 
-export const { useGetPokemonByNameQuery, useGetBusinessArticlesQuery, useGetAllArticlesQuery,useGetPoliticsArticlesQuery, useGetTechnologyArticlesQuery, useGetArticlesByIdQuery } = apiSlice
+export const { useGetPokemonByNameQuery, useGetBusinessArticlesQuery, useGetAllArticlesQuery,useGetPoliticsArticlesQuery, useGetTechnologyArticlesQuery, useGetArticlesByIdQuery,useGetTestCallArticlesQuery } = apiSlice
 
 

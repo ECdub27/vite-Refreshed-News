@@ -10,6 +10,7 @@ import Footer from './Components/Footer/Footer';
 import TechnologySection from './Components/Technology/techSection';
 import PoliticsSection from './Components/Politics/politicsSection';
 import React from 'react';
+import BasicTimeline1 from './Components/Header/basicTimeline1';
 // NavBar HeroSlide NewsArticle TechnologySection PoliticsSection
 // see if you can get business sources to the right sidebar 
 export type AppProps = {
@@ -33,6 +34,7 @@ export type AppProps = {
   href: string;
   key:string;
   id?: string;
+  image?: string;
   onClick(event: React.MouseEvent<HTMLButtonElement>): void;
   optional?: string;
   setState: React.Dispatch<React.SetStateAction<number>>;
@@ -133,6 +135,11 @@ const App: React.FC = () => {
               throw new Error('Function not implemented.');
             } } />
     </section>
+    <BasicTimeline1 key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''} position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
+            throw new Error('Function not implemented.');
+          } } setState={function (): void {
+            throw new Error('Function not implemented.');
+          } }  />
   <footer>
     <Footer description={''} title={''} />
   </footer>
