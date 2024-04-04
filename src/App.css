@@ -52,49 +52,19 @@ ul{
  /* div styles */
 
   /* Footer Styles */ 
-footer{
-  display:flex;
-  flex-direction: row;
-  min-height: 100px;
-  padding: 45px 32px 136px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-box-sizing: border-box;
-}
-  .footer-list-el, .app-footer-li-1,
-  .app-footer-li-2,
-  .app-footer-li-3
-  .app-footer-li-4
-  .app-footer-li-5
-  .app-footer-li-6{
-    display:flex;
-  flex-direction: row;
-  min-height: 300px;
-  padding: 45px 32px 136px;
-  width: 100%;
-  position: relative;
-  bottom: 0;
-  left: 0;
-box-sizing: border-box;
-  }
+
+  
 
   
   .hero-image{
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('../public/cityView.jpg');
-    height: 400px;
-    background-size: cover;
-    width:100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 400px;
-    font-weight: 700;
-    
+    height: 100vh;
+    width:100vw; /* This makes the hero image take up the full height of the viewport */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+    margin:0;
+    padding:0;
   
   }
   
@@ -103,7 +73,7 @@ box-sizing: border-box;
     font-weight: bolder;
     margin-bottom: 20px;
      color: #282C34;
-     background-color: rgba(224, 96, 126, 0.15);
+     background-color: #fff;
      
      
   }
@@ -130,14 +100,46 @@ box-sizing: border-box;
     color: #fff;
   }
 
-
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes the container take up the full height of the viewport */
+  }
 
   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.timeline {
+  flex: 3;
+  /* Styles for timeline */
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .timeline, aside {
+    flex: none;
+    width: 100%;
+  }
+}
+
+aside {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  margin: 0;
 }
 
 header {
@@ -147,49 +149,7 @@ header {
   height: 100%;
   
 }
-
-main {
-  display: flex;
-  height: 100%;
+.app-footer {
+  width: 100vw; 
+  box-sizing: border-box; 
 }
-
-nav {
-  height: 100;
- flex: 1;
- 
-}
-
-article {
-  flex: 1;
-  margin-left: 20%;
-  
-}
-
-aside {
-  flex: 1;
- align-items: center;
-margin-left: 20%;
-}
-
-footer {
-  
-  height: 40vh;
-}
-
-section{
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-self: center;
-}
-
-header,
-footer,
-article,
-nav,
-aside {
-  padding: 1em;
-}
-
-  
-
-

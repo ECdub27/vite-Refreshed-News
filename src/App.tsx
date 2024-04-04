@@ -87,9 +87,8 @@ const App: React.FC = () => {
 
   <nav>
   <header>
-  <div className='header-div'>
   
-<div className='flex-container1'>
+
 
   <header className="App-header">
     <div className='hero-image'>
@@ -98,50 +97,64 @@ const App: React.FC = () => {
     </div>
     
       <a href='#headlines'>Top Headlines 🗞</a>
-      <a href='#business'>Business Sources 📈 </a>
-      <a href='#polly'>Politics 👨‍💼 👩‍💼 </a>
-      <a href='#tech'>Technology 💻 </a>
+      <a href='#business/politics'>Business Sources & Politics News 📈 </a>
+      <a href='#technology'>Technology 💻 </a>
     
 
   </header>
-
-</div>
-</div>
   </header>
   </nav>
+
+
   <main>
-    <article id='headlines'>
-     <HeroSlide />
-    </article>
-    <aside id='business'>
-      <NewsArticle key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''} position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
-                throw new Error('Function not implemented.');
-              } } setState={function (): void {
-                throw new Error('Function not implemented.');
-              } }  />
-              <div id='polly'>
-       <PoliticsSection key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''}  position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
-                throw new Error('Function not implemented.');
-              } } setState={function (): void {
-                throw new Error('Function not implemented.');
-              } } />
-              </div>
+    <section className="timeline" id='headlines'>
+      <a href="#headlines">
+      <HeroSlide />
+      </a>
+    </section>
+    <aside>
+      <div className="aside-top" id='business/politics'>
+       
+        <NewsArticle key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''} position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
+                  throw new Error('Function not implemented.');
+                } } setState={function (): void {
+                  throw new Error('Function not implemented.');
+                } } /> 
+        
+        <PoliticsSection key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''} position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
+                  throw new Error('Function not implemented.');
+                } } setState={function (): void {
+                  throw new Error('Function not implemented.');
+                } } /> 
+                
+      </div>
+      <div className="aside-bottom" id='technology'>
+        <a href='#technology'>
+        <TechnologySection key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''} position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
+                  throw new Error('Function not implemented.');
+                } } setState={function (): void {
+                  throw new Error('Function not implemented.');
+                } } />
+                </a>
+      </div>
     </aside>
   </main>
-  <section id='tech'>
-    <TechnologySection key={''} message={''} count={0} disabled={false} names={[]} status={'waiting'} description={''} title={''} name={''}  position={''} urlToImage={''} rowHeight={0} flexItems={0} href={''} onClick={function (): void {
-              throw new Error('Function not implemented.');
-            } } setState={function (): void {
-              throw new Error('Function not implemented.');
-            } } />
-    </section>
-    
-  <footer>
-    <Footer description={''} title={''} />
-  </footer>
+ 
+
+
+  <footer className="app-footer">
+  <Footer description={''} title={''} />
+</footer>
+
+
+
+
+
+
 </body>
 
-</ThemeProvider>
+
+
      
 
      
@@ -152,7 +165,7 @@ const App: React.FC = () => {
        
 
        
-      
+</ThemeProvider>    
 </div>
       // app div
    

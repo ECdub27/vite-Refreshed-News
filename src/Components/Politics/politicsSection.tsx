@@ -4,7 +4,7 @@ import LinearBuffer from "../../linearBuffer";
 import { useGetPoliticsArticlesQuery } from "../../store/newsApiSlice";
 import  Typography  from "@mui/material/Typography";
 import React, { Key } from 'react';
-
+import './politicsSection.css';
 
 const PoliticsSection:React.FC<AppProps> = () => {
    const {data, isLoading, error} = useGetPoliticsArticlesQuery('');

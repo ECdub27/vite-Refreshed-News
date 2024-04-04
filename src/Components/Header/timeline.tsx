@@ -25,7 +25,7 @@ const BasicTimeline: React.FC<AppProps> = () => {
       ) : data ? (
        
         <div> 
-        <Timeline>
+        <Timeline position='alternate'>
         <h2 className='timeline-h2'>What's Happening Right Now</h2>
         {data.articles.map((article:ApiProps & AppProps, index:ApiProps & Key) => (
          <div>
