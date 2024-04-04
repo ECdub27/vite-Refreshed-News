@@ -5,7 +5,7 @@ import NewsArticle from './Components/Home/newsArticle';
 // MUI themee provider
 import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material';
-
+import ScrollButton from './scrollButton';
 import Footer from './Components/Footer/Footer';
 import TechnologySection from './Components/Technology/techSection';
 import PoliticsSection from './Components/Politics/politicsSection';
@@ -139,7 +139,7 @@ const App: React.FC = () => {
       </div>
     </aside>
   </main>
- 
+ <button className='backButton'>Back To Top</button>
 
 
   <footer className="app-footer">
@@ -148,7 +148,7 @@ const App: React.FC = () => {
 
 
 
-
+<ScrollButton />
 
 
 </body>
