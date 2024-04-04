@@ -37,7 +37,7 @@ const BasicTimeline: React.FC<AppProps> = () => {
           <TimelineContent>
 
            <Typography  sx={{alignContent: 'center'}}fontFamily="League Spartan"
-    color='#E0607E'>
+    color='#E0607E' component='span'>
             <li key={index.id}>
                 <p>{article.title}</p>
            <p>{article.name}</p> 
