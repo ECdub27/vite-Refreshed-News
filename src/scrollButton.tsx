@@ -29,10 +29,11 @@ window.addEventListener('scroll', toggleVisible);
 
 
 return (
+    <a href='#top'>
 <Button href='#top'>
 <ArrowCircleUpIcon  onClick={scrollToTop} style={{display: visible ? 'inline' : 'none'}} />
 </Button>
-
+</a>
 );
 
 
